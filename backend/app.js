@@ -45,6 +45,10 @@ app.use(
     secret: "your_session_secret_here",
     resave: false,
     saveUninitialized: false,
+    cookie: {
+      sameSite: "none",
+      secure: true
+    }
   })
 );
 
