@@ -49,7 +49,7 @@ export default function Header() {
             </li>
             <li className="nav-item ms-lg-3">
               <a
-                href={`/myshop/${user.siteName}`}
+                href={`/myshopz/${user.siteName}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline-success align-items-center me-lg-3 d-flex"
