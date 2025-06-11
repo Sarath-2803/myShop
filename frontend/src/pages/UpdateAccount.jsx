@@ -17,7 +17,7 @@ export default function UpdateAccount() {
 
   // Fetch current user data
   useEffect(() => {
-    fetch("http://localhost:3000/account", { credentials: "include" })
+    fetch("https://myshop-backend-8177.onrender.com/account", { credentials: "include" })
       .then((res) => res.json())
       .then((data) => {
         setForm({
@@ -48,7 +48,7 @@ export default function UpdateAccount() {
     setError("");
     setSuccess("");
     try {
-      const res = await fetch("http://localhost:3000/account", {
+      const res = await fetch("https://myshop-backend-8177.onrender.com/account", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

@@ -34,7 +34,7 @@ export default function Dashboard() {
 
   // Fetch items
   useEffect(() => {
-    fetch("http://localhost:3000/items", { credentials: "include" })
+    fetch("https://myshop-backend-8177.onrender.com/items", { credentials: "include" })
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch(() => setItems([]));
@@ -47,7 +47,7 @@ export default function Dashboard() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    await fetch("http://localhost:3000/additem", {
+    await fetch("https://myshop-backend-8177.onrender.com/additem", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
@@ -74,7 +74,7 @@ export default function Dashboard() {
   const handleUpdateSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    await fetch('http://localhost:3000/update', {
+    await fetch('https://myshop-backend-8177.onrender.com/update', {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
@@ -105,7 +105,7 @@ export default function Dashboard() {
   // Delete item
   const confirmDelete = async () => {
     setLoading(true);
-    await fetch(`http://localhost:3000/delete/${deleteId}`, {
+    await fetch(`https://myshop-backend-8177.onrender.com/delete/${deleteId}`, {
       method: "DELETE",
       credentials: "include",
     });

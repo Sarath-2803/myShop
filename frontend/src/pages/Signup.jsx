@@ -42,7 +42,7 @@ export default function Signup() {
       password: form.password,
     };
     try {
-      const res = await fetch("http://localhost:3000/signup", {
+      const res = await fetch("https://myshop-backend-8177.onrender.com/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

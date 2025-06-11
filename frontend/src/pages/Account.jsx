@@ -7,7 +7,7 @@ export default function Account() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/account", { credentials: "include" })
+    fetch("https://myshop-backend-8177.onrender.com/account", { credentials: "include" })
       .then((res) => res.json())
       .then((data) => setUser(data))
       .catch(() => setUser(null));
@@ -92,7 +92,7 @@ export default function Account() {
             style={{ letterSpacing: "0.5px" }}
             onClick={() => {
               if (window.confirm("Are you sure you want to sign out?")) {
-                fetch("http://localhost:3000/logout", {
+                fetch("https://myshop-backend-8177.onrender.com/logout", {
                   method: "GET",
                   credentials: "include",
                 }).then(() => (window.location.href = "/login"));

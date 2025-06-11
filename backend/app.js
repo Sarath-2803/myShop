@@ -18,7 +18,7 @@ const cors = require("cors");
 
 // Allow requests from your frontend (adjust the origin if needed)
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "http://myshopz.netlify.app",
   credentials: true
 }));
 

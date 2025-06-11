@@ -13,7 +13,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:3000/contact", {
+    await fetch("https://myshop-backend-8177.onrender.com/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include", // <-- this is important

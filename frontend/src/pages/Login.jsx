@@ -13,7 +13,7 @@ export default function Login() {
     e.preventDefault();
     setError("");
     try {
-      const res = await fetch("http://localhost:3000/login", {
+      const res = await fetch("https://myshop-backend-8177.onrender.com/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -123,7 +123,7 @@ export default function Login() {
         </div>
         <div className="d-grid mb-2">
           <a
-            href="http://localhost:3000/auth/google"
+            href="https://myshop-backend-8177.onrender.com/auth/google"
             className="btn btn-outline-dark google-btn"
             style={{
               borderRadius: "2rem",

@@ -9,7 +9,7 @@ export default function ShopTemplate() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/myshop/${siteName}`)
+    fetch(`https://myshop-backend-8177.onrender.com/myshop/${siteName}`)
       .then((res) => res.json())
       .then((data) => {
         setShop({
