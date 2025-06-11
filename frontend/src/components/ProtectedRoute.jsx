@@ -6,7 +6,7 @@ export default function ProtectedRoute({ children }) {
   const [authenticated, setAuthenticated] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:3000/loggedin", {
+    fetch("https://myshop-backend-8177.onrender.com/loggedin", {
       credentials: "include",
     })
       .then((res) => {
