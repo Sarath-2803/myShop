@@ -30,7 +30,7 @@ export default function Home() {
               background: "linear-gradient(90deg, #25D366 60%, #128c4b 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent"
-            }}>myShop</span>
+            }}>myShopz</span>
           </a>
           <button
             className="navbar-toggler"
@@ -145,7 +145,7 @@ export default function Home() {
                 color: "#128c4b",
                 letterSpacing: "2px"
               }}>
-                myShop
+                myShopz
               </div>
               <h1 className="fw-bold mb-3" style={{
                 fontSize: "2.7rem",
@@ -282,7 +282,7 @@ export default function Home() {
               }}>
                 <div style={{ fontSize: "1.5rem", color: "#25D366" }}>“</div>
                 <div style={{ color: "#222", fontSize: "1.08rem", marginBottom: "1rem" }}>
-                  myShop made it so easy to take my business online. I set up my shop in minutes and started getting orders on WhatsApp the same day!
+                  myShopz made it so easy to take my business online. I set up my shop in minutes and started getting orders on WhatsApp the same day!
                 </div>
                 <div className="testimonial-author" style={{ color: "#128c4b", fontWeight: 600 }}>— A Happy Shop Owner</div>
               </div>
@@ -328,7 +328,7 @@ export default function Home() {
             maxWidth: "600px",
             margin: "auto"
           }}>
-            myShop empowers anyone to launch an online shop in minutes, manage products easily, and receive orders directly on WhatsApp. No coding, no fees—just simple, effective selling for everyone!
+            myShopz empowers anyone to launch an online shop in minutes, manage products easily, and receive orders directly on WhatsApp. No coding, no fees—just simple, effective selling for everyone!
           </p>
         </section>
       </div>

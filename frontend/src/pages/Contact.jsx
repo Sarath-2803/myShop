@@ -25,7 +25,7 @@ export default function Contact() {
   return (
     <div>
       <Helmet>
-        <title>Contact Us - myShop</title>
+        <title>Contact Us - myShopz</title>
       </Helmet>
       <Header />
       <div className="container py-5">

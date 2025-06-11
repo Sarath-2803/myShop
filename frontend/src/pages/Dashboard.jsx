@@ -119,7 +119,7 @@ export default function Dashboard() {
   return (
     <div>
       <Helmet>
-        <title>Dashboard - myShop</title>
+        <title>Dashboard - myShopz</title>
       </Helmet>
         <Header/>
     <div

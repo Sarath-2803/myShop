@@ -76,7 +76,7 @@ export default function UpdateAccount() {
   return (
     <div>
       <Helmet>
-        <title>Update Account - myShop</title>
+        <title>Update Account - myShopz</title>
       </Helmet>
       <Header />
     <div className="container">

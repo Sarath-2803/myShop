@@ -24,7 +24,7 @@ export default function Account() {
   return (
     <div>
       <Helmet>
-        <title>Account - myShop</title>
+        <title>Account - myShopz</title>
       </Helmet>
       <Header />
     <div className="container">

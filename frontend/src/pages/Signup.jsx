@@ -68,7 +68,7 @@ export default function Signup() {
       }}
     >
       <Helmet>
-        <title>Sign Up - myShop</title>
+        <title>Sign Up - myShopz</title>
       </Helmet>
       <div
         className="signup-card mt-4 mb-4 w-100"
@@ -96,7 +96,7 @@ export default function Signup() {
               textDecoration: "none",
             }}
           >
-            myShop
+            myShopz
           </a>
           <h2 className="fw-bold mb-1" style={{ letterSpacing: "1px", fontSize: "1.5rem" }}>
             Sign Up

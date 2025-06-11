@@ -40,7 +40,7 @@ export default function Login() {
       }}
     >
       <Helmet>
-        <title>Login - myShop</title>
+        <title>Login - myShopz</title>
       </Helmet>
       <div
         className="login-card p-4"
@@ -67,7 +67,7 @@ export default function Login() {
               textDecoration: "none",
             }}
           >
-            myShop
+            myShopz
           </a>
           <h2 className="fw-bold mb-1" style={{ letterSpacing: "1px", fontSize: "1.7rem" }}>
             Login

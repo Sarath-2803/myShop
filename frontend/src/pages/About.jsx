@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div>
       <Helmet>
-        <title>About myShop</title>
+        <title>About myShopz</title>
       </Helmet>
       <Header />
       <div className="container py-5">
@@ -25,10 +25,10 @@ export default function About() {
                 color: "#25D366",
               }}
             >
-              About myShop
+              About myShopz
             </h2>
             <p className="lead mb-4" style={{ color: "#444" }}>
-              <strong>myShop</strong> is a simple, free platform that helps anyone take their shop online and start
+              <strong>myShopz</strong> is a simple, free platform that helps anyone take their shop online and start
               receiving orders directly on WhatsApp—no coding or technical skills required!
             </p>
             <ul className="list-unstyled mb-4">
@@ -49,7 +49,7 @@ export default function About() {
               </li>
             </ul>
             <p>
-              <strong>Why myShop?</strong>
+              <strong>Why myShopz?</strong>
               <br />
               We believe every small business deserves an online presence. myShop is built to empower shop owners, home
               businesses, and creators to reach more customers with zero hassle.
@@ -57,7 +57,7 @@ export default function About() {
             <p>
               <strong>Who made this?</strong>
               <br />
-              myShop is a passion project by an indie developer who wants to make e-commerce accessible to everyone.
+              myShopz is a passion project by an indie developer who wants to make e-commerce accessible to everyone.
               {/* If you like this platform, consider <a href="https://www.buymeacoffee.com/" target="_blank" style={{ color: "#25D366" }}>supporting with a coffee</a>! */}
             </p>
           </div>

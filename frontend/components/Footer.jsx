@@ -27,7 +27,7 @@ export default function Footer() {
           </Link>
         </div>
         <div className="text-muted small">
-          &copy; {new Date().getFullYear()} myShop. All rights reserved.
+          &copy; {new Date().getFullYear()} myShopz. All rights reserved.
         </div>
       </div>
     </footer>

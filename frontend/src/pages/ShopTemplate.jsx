@@ -90,7 +90,7 @@ export default function ShopTemplate() {
       </div>
       {/* Built with myShop - separate from footer */}
       <div className="text-center py-2" style={{ fontSize: "1rem", fontWeight: 600,color: "gray"}}>
-        Built with <a href="/" style={{ color: "#25D366", fontWeight: 700 }}>myShop</a>
+        Built with <a href="/" style={{ color: "#25D366", fontWeight: 700,textDecoration:'none' }}>myShopz</a>
       </div>
       <footer className="text-center py-3 text-muted small" style={{ background: "#f8fafc", borderTop: "1px solid #e2e8f0" }}>
         &copy; {new Date().getFullYear()}{" "}
