@@ -67,7 +67,7 @@ function App() {
             </ProtectedRoute>
           }
         />
-         <Route path="/myshop/:siteName" element={<ShopTemplate />} />
+         <Route path="/myshopz/:siteName" element={<ShopTemplate />} />
       </Routes>
     </Router>
   );

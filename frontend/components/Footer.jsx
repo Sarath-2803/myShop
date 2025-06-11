@@ -23,7 +23,7 @@ export default function Footer() {
           }}
         >
           <Link to="/" style={{ color: "#25D366", textDecoration: "none" }}>
-            myShop
+            myShopz
           </Link>
         </div>
         <div className="text-muted small">
