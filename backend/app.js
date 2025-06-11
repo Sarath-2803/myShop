@@ -38,7 +38,7 @@ const user = require("./models/user");
 
 app.use(cookieParser("secret"));
 
-
+app.set('trust proxy', 1);
 // Session middleware (must come before passport)
 app.use(
   session({
