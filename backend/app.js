@@ -111,7 +111,7 @@ const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 
 //Routes
 app.get("/", (req, res) => {
-  res.render("index", { title: "myShop" });
+  res.send("myShop backend is running!");
 });
 
 
