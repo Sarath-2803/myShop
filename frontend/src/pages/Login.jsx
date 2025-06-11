@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false); // Add loading state
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -12,6 +13,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+    setLoading(true); // Start loading
     try {
       const res = await fetch("https://myshop-backend-8177.onrender.com/login", {
         method: "POST",
@@ -19,6 +21,7 @@ export default function Login() {
         credentials: "include",
         body: JSON.stringify(form),
       });
+      setLoading(false); // Stop loading
       if (res.ok) {
         window.location.href = "/dashboard";
       } else {
@@ -26,6 +29,7 @@ export default function Login() {
         setError(data.message || "Login failed");
       }
     } catch {
+      setLoading(false); // Stop loading
       setError("Network error");
     }
   };
@@ -100,6 +104,9 @@ export default function Login() {
               style={{ fontSize: "1rem", borderRadius: "0.8rem" }}
             />
           </div>
+          {loading && (
+            <div className="text-center my-2 text-success">Logging in, please wait...</div>
+          )}
           {error && (
             <div className="alert alert-danger py-2">{error}</div>
           )}
@@ -114,6 +121,7 @@ export default function Login() {
               boxShadow: "0 2px 8px #25d36622",
               transition: "background 0.2s, box-shadow 0.2s, transform 0.15s",
             }}
+            disabled={loading}
           >
             Login
           </button>

@@ -125,9 +125,18 @@ app.get("/", (req, res) => {
 app.post("/signup", async (req, res, next) => {
   try {
     const { name, shopName, siteName, number, email, password } = req.body;
-    const existingUser = await User.findOne({ where: { email } });
-    if (existingUser) {
+    // Check for existing email, number, or siteName
+    const existingEmail = await User.findOne({ where: { email } });
+    if (existingEmail) {
       return res.status(400).json({ message: "Email already registered." });
+    }
+    const existingNumber = await User.findOne({ where: { number } });
+    if (existingNumber) {
+      return res.status(400).json({ message: "Phone number already registered." });
+    }
+    const existingSite = await User.findOne({ where: { siteName } });
+    if (existingSite) {
+      return res.status(400).json({ message: "Site name already taken." });
     }
     const hashedPassword = await bcrypt.hash(password, 10);
     const user = await User.create({
@@ -138,13 +147,25 @@ app.post("/signup", async (req, res, next) => {
       email,
       password: hashedPassword,
     });
-    // Log the user in after signup
     req.login(user, function (err) {
       if (err) { return next(err); }
-      // Respond with success and user info
       return res.status(201).json({ message: "Account created and logged in!", user });
     });
   } catch (error) {
+    // Handle unique constraint errors from the DB
+    if (error.name === 'SequelizeUniqueConstraintError') {
+      const field = error.errors[0]?.path;
+      if (field === 'number') {
+        return res.status(400).json({ message: "Phone number already registered." });
+      }
+      if (field === 'email') {
+        return res.status(400).json({ message: "Email already registered." });
+      }
+      if (field === 'siteName') {
+        return res.status(400).json({ message: "Site name already taken." });
+      }
+      return res.status(400).json({ message: "Duplicate field error." });
+    }
     console.error("Signup error:", error);
     return res.status(500).json({ message: "Signup failed. Please try again." });
   }

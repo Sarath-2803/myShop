@@ -14,6 +14,7 @@ export default function Signup() {
   });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [loading, setLoading] = useState(false); // <-- Add this line
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -32,7 +33,7 @@ export default function Signup() {
       setError("You must agree to the terms and conditions.");
       return;
     }
-    // Only send required fields to backend
+    setLoading(true); // <-- Start loading
     const payload = {
       name: form.name,
       shopName: form.shopName,
@@ -48,14 +49,15 @@ export default function Signup() {
         credentials: "include",
         body: JSON.stringify(payload),
       });
+      setLoading(false); // <-- Stop loading
       if (res.ok) {
-        // Redirect to dashboard
         navigate("/dashboard");
       } else {
         const data = await res.json();
         setError(data.message || "Signup failed");
       }
     } catch {
+      setLoading(false); // <-- Stop loading
       setError("Network error");
     }
   };
@@ -200,6 +202,9 @@ export default function Signup() {
               Agree to terms and conditions
             </label>
           </div>
+          {loading && (
+            <div className="text-center my-2 text-success">Creating account, please wait...</div>
+          )}
           {error && <div className="alert alert-danger py-2">{error}</div>}
           {success && <div className="alert alert-success py-2">{success}</div>}
           <button
@@ -213,6 +218,7 @@ export default function Signup() {
               boxShadow: "0 2px 8px #25d36622",
               transition: "background 0.2s, box-shadow 0.2s, transform 0.15s",
             }}
+            disabled={loading} // <-- Disable button while loading
           >
             Create Account
           </button>
