@@ -7,7 +7,7 @@ export default function Header() {
   const active = (path) => location.pathname === path ? " active" : "";
   const [user,setUser] = useState({});
   useEffect(() => {
-    fetch("http://localhost:3000/account", { credentials: "include" })
+    fetch("https://myshop-backend-8177.onrender.com/account", { credentials: "include" })
       .then((res) => res.json())
       .then((data) => setUser(data))
       .catch(() => setUser({}));
