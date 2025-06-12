@@ -125,6 +125,49 @@ export default function Home() {
         `}
       </style>
 
+      {/* Demo Shop Banner */}
+      <div
+        className="demo-banner text-center"
+        style={{
+          background: "linear-gradient(90deg, #25D366 60%, #128c4b 100%)",
+          color: "#fff",
+          padding: "0.85rem 0.5rem",
+          fontWeight: 600,
+          fontSize: "1.13rem",
+          letterSpacing: "0.5px",
+          boxShadow: "0 2px 12px #25d36622",
+        }}
+      >
+        🚀 Want to see a live shop?&nbsp;
+        <a
+          href="https://myshopz.netlify.app/myshopz/abcstore"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "#fff",
+            textDecoration: "underline",
+            fontWeight: 700,
+            borderBottom: "2px solid #fff",
+            transition: "color 0.2s, border-bottom 0.2s"
+          }}
+        >
+          See Demo Shop
+        </a>
+        <style>
+          {`
+            @media (max-width: 480px) {
+              .demo-banner {
+                font-size: 0.97rem !important;
+                padding: 0.7rem 0.3rem !important;
+              }
+              .demo-banner a {
+                font-size: 1rem !important;
+              }
+            }
+          `}
+        </style>
+      </div>
+
       {/* Hero Section */}
       <div className="container">
         <section
@@ -316,6 +359,23 @@ export default function Home() {
             }}
           >
             Start Free Now
+          </a>
+          <br />
+          <a
+            href="https://myshopz.netlify.app/myshopz/abcstore"
+            className="btn btn-outline-light btn-lg px-4 mt-3"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              borderRadius: "2rem",
+              fontWeight: 700,
+              color: "#fff",
+              border: "2px solid #fff",
+              background: "transparent",
+              transition: "background 0.2s, color 0.2s, box-shadow 0.2s"
+            }}
+          >
+            See Demo Shop
           </a>
         </section>
 
