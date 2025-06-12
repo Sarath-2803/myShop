@@ -302,7 +302,7 @@ export default function Home() {
         }}>
           <h3 className="fw-bold mb-3" style={{ color: "#fff" }}>Ready to make your shop online?</h3>
           <p className="mb-3" style={{ fontSize: "1.15rem" }}>
-            Join hundreds of shop owners who trust <span style={{ fontFamily: "'Dancing Script',cursive", color: "#fff" }}>myShop</span> to grow their business.
+            Join hundreds of shop owners who trust <span style={{ fontFamily: "'Dancing Script',cursive", color: "#fff" }}>myShopz</span> to grow their business.
           </p>
           <a href="/signup" className="btn btn-light btn-lg px-4 cta-btn"
             style={{
