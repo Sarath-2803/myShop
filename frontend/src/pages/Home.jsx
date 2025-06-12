@@ -321,7 +321,7 @@ export default function Home() {
 
         {/* About Section */}
         <section className="about-section text-center mb-5" id="about">
-          <h2 className="fw-bold mb-3" style={{ color: "#25D366", fontSize: "2rem" }}>Why myShop?</h2>
+          <h2 className="fw-bold mb-3" style={{ color: "#25D366", fontSize: "2rem" }}>Why myShopz?</h2>
           <p style={{
             fontSize: "1.15rem",
             color: "#444",
@@ -339,7 +339,7 @@ export default function Home() {
         borderTop: "1px solid #e2e8f0",
         letterSpacing: "0.5px"
       }}>
-        &copy; {new Date().getFullYear()} <span style={{ color: "#25D366", fontFamily: "'Dancing Script',cursive" }}>myShop</span>
+        &copy; {new Date().getFullYear()} <span style={{ color: "#25D366", fontFamily: "'Dancing Script',cursive" }}>myShopz</span>
       </footer>
     </div>
   );
