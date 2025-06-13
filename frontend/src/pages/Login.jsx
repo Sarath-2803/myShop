@@ -131,7 +131,7 @@ export default function Login() {
         </div>
         <div className="d-grid mb-2">
           <a
-            href="https://myshop-backend-8177.onrender.com/auth/google"
+            href="https://myshop-4tgg.onrender.com/auth/google"
             className="btn btn-outline-dark google-btn"
             style={{
               borderRadius: "2rem",

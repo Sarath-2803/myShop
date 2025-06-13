@@ -306,10 +306,10 @@ app.get('/auth/google',
 );
 
 app.get('/auth/google/callback',
-  passport.authenticate('google', { failureRedirect: '/login' }),
+  passport.authenticate('google', { failureRedirect: '/login', session: true }),
   function (req, res) {
-    // Successful authentication
-    res.redirect('/dashboard');
+    // Redirect to your frontend dashboard after successful login
+    res.redirect('https://myshopz.netlify.app/dashboard');
   }
 );
 
