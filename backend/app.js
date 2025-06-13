@@ -306,10 +306,14 @@ app.get('/auth/google',
 );
 
 app.get('/auth/google/callback',
-  passport.authenticate('google', { failureRedirect: '/login', session: true }),
+  passport.authenticate('google', { session: true }),
   function (req, res) {
-    // Redirect to your frontend dashboard after successful login
+    // Successful login
     res.redirect('https://myshopz.netlify.app/dashboard');
+  },
+  function (err, req, res, next) {
+    // This error handler will catch authentication errors
+    res.status(401).send("User not found or try later");
   }
 );
 
